@@ -20,9 +20,11 @@
     <header>
         <div class="atr-container">
             <div class="header-top">
-                <div class="logo-container">
-                    <img id="atr-header-logo" src="./assets/svg/atr_white.svg" alt="Logo officiel ATR 97">
-                </div>
+                <a href="/">
+                    <div class="logo-container">
+                        <img id="atr-header-logo" src="./assets/svg/atr_white.svg" alt="Logo officiel ATR 97">
+                    </div>
+                </a>
                 <div class="header-socials-contact">
                     <div class="header-svg-container">
                         <a href="https://www.facebook.com/CAPI-Consult-Antilles-Guyane-1535173253436743/?fref=ts">
@@ -62,7 +64,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="nav-item mobile"><a href="./audits.html">Accueil</a></li>
+                        <li class="nav-item mobile"><a href="/">Accueil</a></li>
                         <li class="nav-item"><a href="./audits.html">Audits</a></li>
                         <li class="nav-item"><a href="./conseil.html">Conseil</a></li>
                         <li class="nav-item"><a href="./formations.html">Formations</a></li>
@@ -75,7 +77,7 @@
             </div>
         </div>
     </header>
-    <section id="banner-home">
+    <section id="banner-home" class="banner">
         <h1>Conseil, Audits et Formations</h1>
         <h2>Santé, Sécurité et conditions de travail</h2>
     </section>
@@ -298,7 +300,7 @@
             <div class="forms-container">
 
                 <div class="radios-container">
-                    <button onclick="displaySection(event)" class="radio-btn" data-target="contact-info">Demande d'information</button>
+                    <button onclick="displaySection(event)" class="radio-btn" data-target="contact-info">Demande d'informations</button>
                     <button onclick="displaySection(event)" class="radio-btn" data-target="audit-mase">Demande d'audit MASE</button>
                 </div>
                 <form action="" class="contact-form" id="contact-info">

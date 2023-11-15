@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>ATR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="atr-container">
+            <div class="header-top">
+                <a href="/">
+                    <div class="logo-container">
+                        <img id="atr-header-logo" src="./assets/svg/atr_white.svg" alt="Logo officiel ATR 97">
+                    </div>
+                </a>
+                <div class="header-socials-contact">
+                    <div class="header-svg-container">
+                        <a href="https://www.facebook.com/CAPI-Consult-Antilles-Guyane-1535173253436743/?fref=ts">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.003 12.075C24.003 5.406 18.63 0 12.003 0C5.373 0.0015 0 5.406 0 12.0765C0 18.102 4.389 23.097 10.125 24.003V15.5655H7.08V12.0765H10.128V9.414C10.128 6.3885 11.9205 4.7175 14.661 4.7175C15.975 4.7175 17.3475 4.953 17.3475 4.953V7.923H15.834C14.3445 7.923 13.8795 8.8545 13.8795 9.81V12.075H17.2065L16.6755 15.564H13.878V24.0015C19.614 23.0955 24.003 18.1005 24.003 12.075Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header-svg-container">
+                        <a href="/#contact">
+                            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.75 0H2.75C1.2375 0 0.01375 1.2375 0.01375 2.75L0 19.25C0 20.7625 1.2375 22 2.75 22H24.75C26.2625 22 27.5 20.7625 27.5 19.25V2.75C27.5 1.2375 26.2625 0 24.75 0ZM24.75 5.5L13.75 12.375L2.75 5.5V2.75L13.75 9.625L24.75 2.75V5.5Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="header-svg-container mobile" onclick="toggleMenu(event)">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.43262 11.8132C5.43262 10.8927 6.17881 10.1465 7.09928 10.1465H33.7659C34.6864 10.1465 35.4326 10.8927 35.4326 11.8132V11.8132C35.4326 12.7336 34.6864 13.4798 33.7659 13.4798H7.09928C6.17881 13.4798 5.43262 12.7336 5.43262 11.8132V11.8132ZM5.43262 20.1465C5.43262 19.226 6.17881 18.4798 7.09928 18.4798H33.7659C34.6864 18.4798 35.4326 19.226 35.4326 20.1465V20.1465C35.4326 21.067 34.6864 21.8132 33.7659 21.8132H7.09928C6.17881 21.8132 5.43262 21.067 5.43262 20.1465V20.1465ZM5.43262 28.4798C5.43262 27.5593 6.17881 26.8132 7.09928 26.8132H33.7659C34.6864 26.8132 35.4326 27.5593 35.4326 28.4798V28.4798C35.4326 29.4003 34.6864 30.1465 33.7659 30.1465H7.09928C6.17881 30.1465 5.43262 29.4003 5.43262 28.4798V28.4798Z"/>
+                </svg>
+            </button>
+            <button class="search-mobile-btn" onclick="toggleSearchBar(event)">
+                <img src="./assets/svg/mobile-search.svg" alt="">
+            </button>
+            <div class="search-bar-container-mobile" onclick="toggleSearchBar(event)">
+                <input class="search-bar" type="text" placeholder="Recherchez ici">
+            </div>
+            <div class="header-bottom"  onclick="toggleMenu(event)">
+                <nav class="nav-container">
+                    <img src="./assets/svg/atr_white.svg" alt="" class="mobile-menu-logo">
+                    <ul class="nav-menu">
+                        <li class="nav-item home">
+                            <a href="/">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 33C22.5523 33 23 32.5523 23 32V28C23 27.4477 23.4477 27 24 27H26C26.5523 27 27 27.4477 27 28V32C27 32.5523 27.4477 33 28 33H32C32.5523 33 33 32.5523 33 32V25.3802C33 25.1353 32.9101 24.8989 32.7474 24.7158L25.7474 16.8408C25.3496 16.3933 24.6504 16.3933 24.2526 16.8408L17.2526 24.7158C17.0899 24.8989 17 25.1353 17 25.3802V32C17 32.5523 17.4477 33 18 33H22Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mobile"><a href="/">Accueil</a></li>
+                        <li class="nav-item"><a href="./audits.html">Audits</a></li>
+                        <li class="nav-item"><a href="./conseil.html">Conseil</a></li>
+                        <li class="nav-item"><a href="./formations.html">Formations</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar-container">
+                    <img src="./assets/svg/search.svg" alt="">
+                    <input class="search-bar" type="text" placeholder="Recherchez ici">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="page-banner" class="banner conseil">
+        <h1>Conseil</h1>
+    </section>
+    <section id="main-content">
+        <div class="atr-container">
+            <div class="section-sub-block">
+                <p class="content-paragraph">
+                    Nos Experts sont habilités IPRP. Ils accompagnent les chefs d'entreprise dans
+                     leurs obligations à préserver la santé et la sécurité des salariés. <br>
+                    Un objectif unique : Réduire vos coûts en optimisant les conditions de travail 
+                    et la performance de votre entreprise. <br> <br>
+                    <strong>Plusieurs prestations que nous pouvons adapter à vos besoins:</strong>
+                </p>
+            </div>
+            <div class="section-sub-block">
+                <h2 class="paragraph-title">Évaluer vos risques professionels : document unique</h2>
+                <p class="content-paragraph">
+                    Le Document Unique d'évaluation des risques professionnels est exigé par le décret n° 
+                    2001-1016 du 5 novembre 2001. L'élaboration et la mise à jour de ce document s'imposent 
+                    à tout employeur dont l'entreprise emploie au moins un salarié. <br>
+                     Cet outil permet de transcrire les résultats de la démarche de prévention
+                      des risques professionnels. Le document unique doit être mis à jour au minimum
+                       une fois par an et lors de tout changement de situation.
+                       Il doit également être revu après chaque accident du travail ou chaque modification de l'entreprise. Nos experts agréés IPRP vous accompagnent dans l'élaboration de votre Document Unique.
+                </p>
+            </div>
+            <div class="section-sub-block">
+                <h2 class="paragraph-title">Vous accompagner dans la mise en place de votre système de management MASE</h2>
+                <p class="content-paragraph">
+                    L'objectif de la certification MASE revient à organiser l'entreprise pour 
+                    l'amélioration de la sécurité, de la santé et de l'environnement au travers
+                     d'un système de management simple et adapté à votre entreprise. <br>
+                    Notre Cabinet est agréé pour la réalisation d'audits de certification MASE. 
+                </p>
+                <p class="content-paragraph">
+                    Nos consultants sont donc les mieux placés pour vous accompagner
+                     dans la mise en place de votre organisation afin de vous préparer à l'audit. <br>
+                     Diagnostic de votre organisation, diagnostic réglementaire, Document Unique, plan d'action, mise à disposition de formulaires et de documents, préparation des revues de direction ou bilans, conseils tout au long de la démarche, etc…
+                </p>
+            </div>
+            <div class="section-sub-block">
+                <h2 class="paragraph-title">Réaliser votre diagnostic réglementaire</h2>
+                <p class="content-paragraph">
+                    Vous souhaitez faire le point sur la conformité 
+                    réglementaire de votre entreprise ? Nos experts vous 
+                    proposent un audit de vos obligations réglementaires 
+                    déclinées en 200 points de contrôle. Un rapport circonstancié 
+                    des conformités et des non-conformités est rédigé.
+                    Si vous le souhaitez, nous pourrons aussi vous accompagner dans l'élaboration 
+                    d'un plan d'actions pour votre mise en conformité.
+                </p>
+            </div>
+            <div class="section-sub-block">
+                <h2 class="paragraph-title">Externalisez votre fonction de référent sécurité</h2>
+                <p class="content-paragraph">
+                    Le Code du travail (art. L. 4644-1 et R. 4644-1) fait obligation à 
+                    l'employeur de désigner un ou plusieurs salariés pour s'occuper
+                     des activités de protection et de prévention des risques 
+                     professionnels de l'entreprise.
+                </p>
+                <p class="content-paragraph">
+                    Bien évidemment, l'employeur ne dispose pas toujours de structures 
+                    ou de compétences internes, notamment quand l'entreprise
+                     est de faible taille. L'employeur peut dans ce cas faire
+                      appel, à nos intervenants en prévention des risques professionnels
+                       (IPRP) pour jouer ce rôle d'appui pour la gestion de la santé et de la sécurité au travail.
+                </p>
+                <a href="/#contact" class="incentive-btn">
+                    Je souhaite avoir plus d'informations
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="atr-footer-infos">
+            <img id="footer-logo" src="./assets/svg/atr_blue.svg" alt="">
+            <div class="addresses-area">
+                <img src="./assets/svg/address.svg" alt="">
+                <div class="addresses">
+                    <div class="address">
+                        <div class="adress-text">9 rue des colonnes </div>
+                        <div class="address-postal-code">75002 PARIS</div>
+                    </div>
+                    <div class="address">
+                        <div class="adress-text">9 rue des colonnes </div>
+                        <div class="address-postal-code">75002 PARIS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="opening-hours">
+                <strong>Horaires d'ouverture</strong>
+                <p class="opening-hours-content"><span class="opening-hours-days">Du Lundi au Vendredi </span><span class="opening-hours-hours">De 8h00 à 16h00</span></p>
+            </div>
+        </div>
+        <div class="atr-footer-links-area">
+            <div class="footer-link-column">
+                <h3>Réseau sociaux</h3>
+                <ul class="socials-links">
+                    <li>
+                        <a href="https://www.facebook.com/CAPI-Consult-Antilles-Guyane-1535173253436743/?fref=ts">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.0001 12.073C24.0001 5.40405 18.6271 -0.00195312 12.0001 -0.00195312C5.37007 -0.000453125 -0.00292969 5.40405 -0.00292969 12.0745C-0.00292969 18.1 4.38607 23.095 10.1221 24.001V15.5635H7.07707V12.0745H10.1251V9.41205C10.1251 6.38655 11.9176 4.71555 14.6581 4.71555C15.9721 4.71555 17.3446 4.95105 17.3446 4.95105V7.92105H15.8311C14.3416 7.92105 13.8766 8.85255 13.8766 9.80805V12.073H17.2036L16.6726 15.562H13.8751V23.9995C19.6111 23.0935 24.0001 18.0985 24.0001 12.073Z"/>
+                            </svg>
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-link-column">
+                <h3>Formations</h3>
+                <ul class="training-links">
+                    <li>
+                        <a href="">Listing des formations</a>
+                    </li>
+                    <li>
+                        <a href="">Calendrier des formations</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-link-column">
+                <h3>Contact</h3>
+                <ul class="contact-links">
+                    <li class="phone-numbers">
+                        <a href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            0590 85 06 05
+                        </a>
+                        <a href="">
+                            <svg style="fill: none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.2652 15.5 20.5196 15.6054 20.7071 15.7929C20.8946 15.9804 21 16.2348 21 16.5V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21C15.4913 21 11.1673 19.2089 7.97918 16.0208C4.79107 12.8327 3 8.50868 3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H7.5C7.76522 3 8.01957 3.10536 8.20711 3.29289C8.39464 3.48043 8.5 3.73478 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            0690 35 47 13
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.75 0H2.75C1.2375 0 0.01375 1.2375 0.01375 2.75L0 19.25C0 20.7625 1.2375 22 2.75 22H24.75C26.2625 22 27.5 20.7625 27.5 19.25V2.75C27.5 1.2375 26.2625 0 24.75 0ZM24.75 5.5L13.75 12.375L2.75 5.5V2.75L13.75 9.625L24.75 2.75V5.5Z"/>
+                            </svg>
+                            contact@atr97.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./motion.js"></script>
+</body>
+</html>

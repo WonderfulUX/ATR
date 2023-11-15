@@ -21,7 +21,7 @@ function displaySection(e){
     if(!e.target.classList.contains('active')){
         document.querySelector('.radio-btn.active') && document.querySelector('.radio-btn.active').classList.remove('active');
         document.querySelector('.d-block') && document.querySelector('.d-block').classList.remove('d-block');
-        e.target.classList.add('active')
+        e.target.classList.add('active');
         document.getElementById(e.target.getAttribute('data-target')).classList.add('d-block');
     }
 }
@@ -52,5 +52,16 @@ function toggleMenu(e){
 
 function toggleSearchBar(e){
     if(e.target.closest('.search-bar')) return;
-    document.querySelector('.search-bar-container-mobile').classList.toggle('open');
+    if(document.querySelector('.search-bar-container-mobile').classList.contains('open')){
+        document.querySelector('.search-bar-container-mobile').style.opacity = 0;
+        setTimeout(() => {
+            document.querySelector('.search-bar-container-mobile').classList.remove('open');
+        }, 100);
+    }
+    else{
+        document.querySelector('.search-bar-container-mobile').classList.add('open');
+        setTimeout(() => {
+            document.querySelector('.search-bar-container-mobile').style.opacity = 1;
+        }, 100);
+    }
 }
