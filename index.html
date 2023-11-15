@@ -40,8 +40,20 @@
                     </div>
                 </div>
             </div>
-            <div class="header-bottom">
+            <button class="header-svg-container mobile" onclick="toggleMenu(event)">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.43262 11.8132C5.43262 10.8927 6.17881 10.1465 7.09928 10.1465H33.7659C34.6864 10.1465 35.4326 10.8927 35.4326 11.8132V11.8132C35.4326 12.7336 34.6864 13.4798 33.7659 13.4798H7.09928C6.17881 13.4798 5.43262 12.7336 5.43262 11.8132V11.8132ZM5.43262 20.1465C5.43262 19.226 6.17881 18.4798 7.09928 18.4798H33.7659C34.6864 18.4798 35.4326 19.226 35.4326 20.1465V20.1465C35.4326 21.067 34.6864 21.8132 33.7659 21.8132H7.09928C6.17881 21.8132 5.43262 21.067 5.43262 20.1465V20.1465ZM5.43262 28.4798C5.43262 27.5593 6.17881 26.8132 7.09928 26.8132H33.7659C34.6864 26.8132 35.4326 27.5593 35.4326 28.4798V28.4798C35.4326 29.4003 34.6864 30.1465 33.7659 30.1465H7.09928C6.17881 30.1465 5.43262 29.4003 5.43262 28.4798V28.4798Z"/>
+                </svg>
+            </button>
+            <button class="search-mobile-btn" onclick="toggleSearchBar(event)">
+                <img src="./assets/svg/mobile-search.svg" alt="">
+            </button>
+            <div class="search-bar-container-mobile" onclick="toggleSearchBar(event)">
+                <input class="search-bar" type="text" placeholder="Recherchez ici">
+            </div>
+            <div class="header-bottom"  onclick="toggleMenu(event)">
                 <nav class="nav-container">
+                    <img src="./assets/svg/atr_white.svg" alt="" class="mobile-menu-logo">
                     <ul class="nav-menu">
                         <li class="nav-item home">
                             <a href="/">
@@ -50,6 +62,7 @@
                                 </svg>
                             </a>
                         </li>
+                        <li class="nav-item mobile"><a href="./audits.html">Accueil</a></li>
                         <li class="nav-item"><a href="./audits.html">Audits</a></li>
                         <li class="nav-item"><a href="./conseil.html">Conseil</a></li>
                         <li class="nav-item"><a href="./formations.html">Formations</a></li>

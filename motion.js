@@ -31,3 +31,26 @@ function displaySection(e){
 //     ele.target.setAttribute('value',selectedDate);
 // });
 
+
+function toggleMenu(e){
+    if(e.target.closest('.nav-container')) return;
+    if(document.querySelector('.header-bottom').classList.contains('open')){
+        document.querySelector('.nav-container').classList.toggle('slide');
+        setTimeout(()=>{
+            document.querySelector('.header-bottom.open').classList.remove('open');
+        },350)
+    }
+    else{
+        document.querySelector('.header-bottom').classList.add('open');
+        setTimeout(()=>{
+            document.querySelector('.nav-container').classList.toggle('slide');
+        },350)
+    }
+    document.querySelector('.header-svg-container.mobile').classList.toggle('open');
+}
+
+
+function toggleSearchBar(e){
+    if(e.target.closest('.search-bar')) return;
+    document.querySelector('.search-bar-container-mobile').classList.toggle('open');
+}
