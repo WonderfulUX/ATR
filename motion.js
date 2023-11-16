@@ -38,7 +38,7 @@ function toggleMenu(e){
         document.querySelector('.nav-container').classList.toggle('slide');
         setTimeout(()=>{
             document.querySelector('.header-bottom.open').classList.remove('open');
-        },350)
+        },800)
     }
     else{
         document.querySelector('.header-bottom').classList.add('open');

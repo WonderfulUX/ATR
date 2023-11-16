@@ -82,9 +82,9 @@ h1,h2,h3{
 body{
     font-family: 'Montserrat', sans-serif;
     color: var(--atr-black);
-    font-size: 18px;
+    font-size: 15px;
     @media screen and (max-width:585px){
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
@@ -155,6 +155,9 @@ header:hover{
     #atr-header-logo{
         content: url(./assets/svg/atr_blue.svg);
     }
+    .dark-header{
+        box-shadow: 0 4px 8px #00000020;
+    }
 }
 @media screen and (max-width: 585px) {
     #atr-header-logo{
@@ -200,7 +203,7 @@ header:hover{
 }
 
 .dark-header .header-bottom svg{
-    height: 60px;
+    height: 52px;
 }
 
 .nav-item.home a{
@@ -348,7 +351,7 @@ header svg{
 }
 
 .nav-container{
-    transition: transform 0.3s ease-out;
+    transition: transform 0.8s cubic-bezier(0.5, 0, 0.01, 1);
 }
 
 .header-bottom{
@@ -373,7 +376,7 @@ header svg{
             width: 240px;
             height: 100%;
             background: linear-gradient(var(--dark-blue), var(--atr-black));
-            padding-left: 50px;
+            padding-left: 30px;
             position: absolute;
             transform: translateX(100%);
             right: 0;
@@ -403,7 +406,7 @@ header svg{
     align-items: center;
     color: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: .3px;
 }
 
@@ -417,10 +420,10 @@ header svg{
     height: 60px;
 }
 .dark-header .header-bottom svg{
-    height: 70px;
+    height: 60px;
 }
 .dark-header .header-bottom .nav-item:not(:first-of-type){
-    line-height: 70px;
+    line-height: 60px;
 }
 
 .nav-item:not(:first-of-type)::before{
@@ -455,7 +458,7 @@ header svg{
     justify-content: center;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.15s linear;
+    transition: opacity 0.6s linear;
 }
 
 .search-bar-container-mobile .search-bar{
@@ -496,7 +499,7 @@ header svg{
     border: none;
 }
 
-.search-bar-container img{
+.search-bar-container svg{
     position: absolute;
     top: 50%;
     right: 0;
@@ -517,7 +520,7 @@ header svg{
     font-size: clamp(30px,4vw,60px);
 }
 #banner-home h2{
-    font-size: clamp(20px,2vw,40px);
+    font-size: clamp(16px,2vw,40px);
     font-weight: 400;
 }
 
@@ -530,6 +533,7 @@ header svg{
     color: var(--main-blue);
     margin-bottom: 20px;
     font-weight: 500;
+    font-size: 20px;
 }
 .content-paragraph{
     line-height: 1.6;
@@ -563,7 +567,10 @@ header svg{
     padding: 0 30px;
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
+    @media screen and (max-width: 850px){
+        font-size: 12px;
+    }
 }
 .btn.btn-tertiary{
     background: var(--dark-blue);
@@ -571,8 +578,8 @@ header svg{
     border-radius: 30px;
 }
 
-.section-sub-block{
-    margin-bottom: 80px;
+.section-sub-block:not(.section-sub-block.top){
+    padding-top: 80px;
 }
 strong, .black-heading{
     line-height: 40px;
@@ -639,10 +646,10 @@ strong.center{
     flex-wrap: wrap;
 }
 .audit-block-maps img{
-    height: 110px;
+    height: 90px;
 }
 .audit-block-maps img:first-of-type{
-    height: 130px;
+    height: 110px;
 }
 
 .audit-block h4{
@@ -654,6 +661,9 @@ strong.center{
 .incentive-links,
 #carousel{
     margin: 100px auto;
+    @media screen and (max-width: 585px){
+        margin: 50px auto;
+    }
 }
 
 .incentive-links{
@@ -703,7 +713,7 @@ strong.center{
 }
 .incentive-link h4{
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 200;
 }
 
@@ -752,7 +762,7 @@ strong.center{
     max-width: 300px;
     margin: 0 25px;
     @media screen and (max-width:768px){
-        max-height: 130px;
+        max-height: 100px;
     }
 }
 
@@ -799,7 +809,7 @@ form{
 
 .contact-form-field,
 .contact-form-field-large{
-    font-size: 16px;
+    font-size: 15px;
     height: 54px;
     background: #FFFFFF50;
 }
@@ -817,7 +827,7 @@ select{
     width: 100%;
     resize: vertical;
     padding: 24px 10px 0;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 select{
@@ -876,15 +886,17 @@ input[type="submit"],
     margin: 0 auto;
     background: var(--dark-blue);
     color: white;
-    font-size: 16px;
-    border-radius: 30px;
+    font-size: 14px;
+    @media screen and (max-width:585px){
+        font-size: 12px;
+    }
 }
 
 .incentive-btn{
     line-height: 60px;
     height: 60px;
     border-radius: 30px;
-    padding: 0 24px;
+    padding: 0 16px;
     margin: 50px auto;
 }
 
@@ -896,22 +908,21 @@ input[type="submit"]:hover,
 
 footer{
     display: flex;
-    justify-content: space-between;
-    padding: 80px 100px;
+    padding: 50px 30px;
     background: var(--very-light-grey);
-    font-size: 16px;
-    column-gap: 50px;
-    @media screen and (max-width: 1300px){
-        padding: 80px 50px;
-    }
-    @media screen and (max-width: 992px){
-        flex-direction: column;
-        row-gap: 80px;
+    font-size: 14px;
+    column-gap: 30px;
+    @media screen and (max-width: 768px){
+        flex-direction: column-reverse;
+        row-gap: 50px;
+        padding: 50px 80px;
     }
     @media screen and (max-width: 585px){
-        padding: 50px 15px;
-        row-gap: 50px;
-        flex-direction: column-reverse;
+        font-size: 13px;
+        padding: 50px 30px;
+    }
+    @media screen and (max-width: 400px){
+        padding: 30px 16px;
     }
 }
 
@@ -921,18 +932,32 @@ footer{
 }
 .atr-footer-links-area{
     flex-wrap: wrap;
-    justify-content: flex-end;
     row-gap: 50px;
-    column-gap: 70px;
+    column-gap: 50px;
+    margin-top: 30px;
+    border-left: 1px solid var(--dark-blue-20);
+    padding-left: 40px;
     @media screen and (max-width: 992px){
         flex-direction: column;
         padding-left: 32px;
     }
+    @media screen and (max-width: 768px){
+        padding-left: 0;
+        border: none;
+    }
     @media screen and (max-width: 585px){
-        flex-direction: column;
-        padding-right: 32px;
+        padding: 0;
         row-gap: 10px;
     }
+}
+
+.socials-links{
+    padding: 10px;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-left: 32px;
 }
 
 .footer-link-column{
@@ -944,9 +969,7 @@ footer{
         }
     }
     @media screen and (max-width: 585px){
-        padding: 10px;
         width: 100%;
-        background: var(--light-grey);
         &:first-of-type{
             width: unset;
         }
@@ -957,11 +980,13 @@ footer{
     opacity: .7;
     font-weight: 300;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 14px;
+    color: var(--main-blue);
     @media screen and (max-width: 992px){
-        color: var(--main-blue);
-        font-weight: 600;
         margin-bottom: 8px;
+    }
+    @media screen and (max-width:585px){
+        font-size: 12px;
     }
 }
 
@@ -969,14 +994,14 @@ footer{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    @media screen and (max-width: 585px){
-        text-align: center;
-        & #footer-logo{
-            margin: 0 auto;
-        }
-        & .addresses-area{
-            justify-content: center;
-        }
+    padding: 30px 30px 0;
+    flex-shrink: 0;
+    @media screen and (max-width: 900px){
+        padding: 30px 20px 0;
+    }
+    @media screen and (max-width: 768px){
+        padding-bottom: 30px;
+        background: var(--light-grey);
     }
 }
 
@@ -1011,10 +1036,10 @@ footer strong{
     align-items: center;
     column-gap: 8px;
 }
-.atr-footer-links-area li svg{
+.atr-footer-infos a svg{
     fill: var(--dark-blue);
 }
-.atr-footer-links-area li:hover svg{
+.atr-footer-infos a:hover svg{
     fill: var(--main-blue);
 }
 
@@ -1067,8 +1092,11 @@ footer strong{
     background: #FFFFFF50;
     color: var(--dark-blue);
     border: 1px solid var(--dark-blue-50);
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+    @media screen and (max-width:585px){
+        font-size: 12px;
+    }
 }
 
 .radio-btn.active{
@@ -1099,7 +1127,8 @@ input[type='date']:not([value=''])::-webkit-datetime-edit{
     display: block;
 }
 
-ul{
+.bullet-list,
+.dot-list{
     padding-left: 20px;
     line-height: 1.8;
 }
@@ -1158,7 +1187,10 @@ ul{
    margin: 50px 0;
 }
 .devise h3{
-    font-size: 18px;
+    font-size: 15px;
+    @media screen and (max-width:585px){
+        font-size: 13px;
+    }
 }
 
 .certif-audits-internes{
