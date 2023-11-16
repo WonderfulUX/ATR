@@ -65,3 +65,7 @@ function toggleSearchBar(e){
         }, 100);
     }
 }
+
+function toggleDescription(element){
+    element.parentElement.classList.toggle('reveal');
+}
