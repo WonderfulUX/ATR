@@ -1486,9 +1486,15 @@ input[type=date]:not([value=""])::-webkit-datetime-edit {
   display: none;
 }
 
-.training-description.d,
-.training-infos.d {
+.training-description.d {
   display: block;
+}
+
+.training-infos.d {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .training-list-item {
@@ -1572,6 +1578,11 @@ input[type=date]:not([value=""])::-webkit-datetime-edit {
        column-gap: 8px;
   line-height: 1.8;
   flex-shrink: 0;
+}
+@media screen and (max-width: 500px) {
+  .info-label {
+    width: 150px;
+  }
 }
 
 .info-icon {
