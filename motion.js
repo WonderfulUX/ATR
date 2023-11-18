@@ -47,6 +47,7 @@ function toggleMenu(e){
         },350)
     }
     document.querySelector('.header-svg-container.mobile').classList.toggle('open');
+    document.body.classList.toggle('locked');
 }
 
 
