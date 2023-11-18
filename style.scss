@@ -971,6 +971,11 @@ li button{
     background: none;
     border: none;
     line-height: 40px;
+    color: var(--atr-black);
+    font-size: 14px;
+    @media screen and (max-width: 585px){
+        font-size: 14px;
+    }
 }
 li button:hover{
     color: var(--main-blue);
@@ -1121,7 +1126,8 @@ footer strong{
     line-height: unset;
 }
 
-.atr-footer-links-area li a{
+.atr-footer-links-area li a,
+.atr-footer-links-area li button{
     line-height: 40px;
     display: inline-flex;
     align-items: center;
