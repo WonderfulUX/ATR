@@ -89,8 +89,8 @@
     <section id="main-content">
         <div class="atr-container">
             <div class="calendar">
-                <span>Découvrez Le calendrier des formations à venir ici</span>
-                <button class="btn btn-tertiary">Formations à venir</button>
+                <span>Découvrez Le calendrier des formations à venir</span>
+                <button class="btn btn-tertiary"  onclick="toggleCalendar(event)">Formations à venir</button>
             </div>
             <div class="section-sub-block top">
                 <h2 class="paragraph-title">L'entreprise</h2>
@@ -351,9 +351,11 @@
                     </div>
                     <div class="form-line">
                         <div class="input-container">
-                            <select name="topic" id="topic">
-                                <option value="test1">Texts 1</option>
-                                <option value="test2"> test2</option>
+                            <select name="audit-type" id="audit-type" multiple>
+                                <option value="" disabled selected>Sujet de la demande</option>
+                                <option value="test1">Audit interne</option>
+                                <option value="test2">Conseil</option>
+                                <option value="test2">Formation</option>
                             </select>
                         </div>
                     </div>
@@ -442,9 +444,32 @@
                     </div>
                     <div class="form-line">
                         <div class="input-container">
-                            <select name="mase-country" id="mase-country">
-                                <option value="test1">France Métropolitaine</option>
+                            <input class="contact-form-field" type="text" id="mase-country" name="mase-country" value="" required>
+                            <label for="mase-country">Pays <span class="required">*</span></label>
+                        </div>
+                        <select name="mase-audit-type" id="mase-audit-type" multiple>
+                            <option value="" disabled selected>Votre audit</option>
+                            <option value="test1">Audit interne</option>
+                            <option value="test2">Audit de renouvellement</option>
+                        </select>
+                    </div>
+                    <div class="form-line">
+                        <div class="input-container">
+                            <select name="mase-copil" id="mase-copil" multiple>
+                                <option value="" disabled selected>Votre COPIL</option>
+                                <option value="test1">Atlantique</option>
+                                <option value="test2">Côte d'Ivoire</option>
+                                <option value="test2">Est</option>
                                 <option value="test2">Guadeloupe</option>
+                                <option value="test2">Guyane</option>
+                                <option value="test2">Guyane</option>
+                                <option value="test2">Hauts-de-France</option>
+                                <option value="test2">Île-de-France</option>
+                                <option value="test2">Méditerranée</option>
+                                <option value="test2">Normandie</option>
+                                <option value="test2">Rhônes Alpes</option>
+                                <option value="test2">Sénégal</option>
+                                <option value="test2">Sud Ouest</option>
                             </select>
                         </div>
                     </div>
@@ -457,6 +482,61 @@
             </div>
         </div>
     </section>
+    <div class="dates" onclick="toggleCalendar(event)">
+        <div class="dates-container">
+            <h2>Calendrier des formations 4è trimestre 2023</h2>
+            <div class="table-head">
+                <div class="table-label">Intitulé</div>
+                <div class="table-period">Période</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Santé Sécurité Conditions de travail (initial)</div>
+                <div class="table-period">Du 27 Novembre au 1er Décembre</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Santé Sécurité Conditions de travail (renouvellement)</div>
+                <div class="table-period">Du 13 au 15 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Économique et Social</div>
+                <div class="table-period">Du 15 au 17 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (module initial)</div>
+                <div class="table-period">Du 9 au 10 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (module initial)</div>
+                <div class="table-period">Du 4 au 5 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (initial - MAC)</div>
+                <div class="table-period">30 Octobre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (initial - MAC)</div>
+                <div class="table-period">22 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation des référents (CSE) harcèlement et agissements sexiste</div>
+                <div class="table-period">14 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Gestes et postures</div>
+                <div class="table-period">26 Octobre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Équipements de protection individuels</div>
+                <div class="table-period">20 Octobre 2023</div>
+            </div>
+        </div>
+        <button class="close-btn">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L52 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M52 2L1.99999 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>                      
+        </button>
+    </div>
     <footer>
         <div class="atr-footer-infos">
             <a href="./index.html">
@@ -495,7 +575,7 @@
                         <a href="./audits.html">Audit MASE</a>
                     </li>
                     <li>
-                        <a href="./audits.htms#audit-internes">Audits internes</a>
+                        <a href="./audits.html#audit-internes">Audits internes</a>
                     </li>
                     <li>
                         <a href="./conseil.html">Conseil</a>
@@ -517,11 +597,11 @@
                 <h3>Contact</h3>
                 <ul class="contact-links">
                     <li class="phone-numbers">
-                        <a href="">0590 85 06 05</a>
-                        <a href="">0690 35 47 13</a>
+                        <a href="tel:+590590850605">0590 85 06 05</a>
+                        <a href="tel:+590690354713">0690 35 47 13</a>
                     </li>
                     <li>
-                        <a href="">contact@atr97.com</a>
+                        <a href="mailto:contact@atr97.com">contact@atr97.com</a>
                     </li>
                 </ul>
             </div>

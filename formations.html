@@ -86,8 +86,8 @@
     <section id="main-content">
         <div class="atr-container">
             <div class="calendar">
-                <span>Découvrez Le calendrier des formations à venir ici</span>
-                <button class="btn btn-tertiary">Formations à venir</button>
+                <span>Découvrez Le calendrier des formations à venir</span>
+                <button class="btn btn-tertiary" onclick="toggleCalendar(event)">Formations à venir</button>
             </div>
             <div class="section-sub-block top">
                 <h2 class="paragraph-title">ATR, organisme de formation certifié</h2>
@@ -113,7 +113,7 @@
                     Saint-Barth.
                 </p>
             </div>
-            <div class="section-sub-block">
+            <div class="section-sub-block" id="listing-formations">
                 <h2 class="paragraph-title">Les formations</h2>
                 <ul class="training-list">
                     <!-- ITEM -->
@@ -122,7 +122,7 @@
                             <h3 class="training-title">CSE santé sécurité et conditions de travail (initiale) </h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -181,7 +181,7 @@
                             <h3 class="training-title">CSE santé sécurité et conditions de travail (Renouvellement)</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -237,10 +237,10 @@
                     <!-- ITEM -->
                     <li class="training-list-item">
                         <div class="training-list-head" onclick="toggleDescription(this)">
-                            <h3 class="training-title">CSE - Représentants du personnel au CSE (Économique et Social )</h3>
+                            <h3 class="training-title">CSE - Représentants du personnel au CSE (Économique et Social)</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -299,7 +299,7 @@
                             <h3 class="training-title">CSE - Référent harcèlement moral, sexuel, et agissements sexistes</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -358,7 +358,7 @@
                             <h3 class="training-title">Formation opérationnelle du Référent Sécurité</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -417,7 +417,7 @@
                             <h3 class="training-title">Présider ou animer le CSE </h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -476,7 +476,7 @@
                             <h3 class="training-title">Maintien et actualisation des compétences du sauveteur secouriste du travail</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -535,7 +535,7 @@
                             <h3 class="training-title">Formation Lutte contre le feu. Utilisation des extincteurs</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -594,7 +594,7 @@
                             <h3 class="training-title">Les équipements de protection individuelle</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -653,7 +653,7 @@
                             <h3 class="training-title">Mettre en œuvre et/ou améliorer un système de management MASE</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -712,7 +712,7 @@
                             <h3 class="training-title">Gestes et postures</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -771,7 +771,7 @@
                             <h3 class="training-title">Formation en vue d'une habilitation électrique pour non électriciens H0B0</h3>
                             <button class="toggle-description-btn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.28032 8.58008L11.7035 16.0033L19.1267 8.58008L21.407 10.8766L11.7035 20.5801L2 10.8766L4.28032 8.58008Z" fill="#111111"/>
+                                    <path d="M7 9.5L12 14.5L17 9.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </button>
                         </div>
@@ -826,15 +826,123 @@
                     </li>
                     <!-- END -->
                 </ul>
-                <a href="/#contact" class="incentive-btn">
+                <button href="/#contact" class="incentive-btn"  onclick="toggleCalendar(event)">
                     Calendrier des formations
-                </a>
+                </button>
             </div>
             <div class="section-sub-block">
                 <h2 class="paragraph-title">Nos chiffres en 2022</h2>
+                <div class="stats">
+                    <div class="stats-top">
+                        <div class="pie-chart"></div>
+                        <ul class="legend">
+                            <li class="legend-color">
+                                <div class="legend-color-square very-high"></div>
+                                <span class="legend-color-label">Très satisfaisant</span>
+                            </li>
+                            <li class="legend-color">
+                                <div class="legend-color-square high "></div>
+                                <span class="legend-color-label">Très satisfaisant</span>
+                            </li>
+                            <li class="legend-color">
+                                <div class="legend-color-square low"></div>
+                                <span class="legend-color-label">Très satisfaisant</span>
+                            </li>
+                            <li class="legend-color">
+                                <div class="legend-color-square very-low"></div>
+                                <span class="legend-color-label">Très satisfaisant</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="stats-bottom">
+                        <span>Taux de satisfaction global de nos apprenants</span>
+                        <small>Mise à jour - Janvier 2023</small>
+                    </div>
+                </div>
+                <div class="disablility-block">
+                    <img src="./assets/svg/disability-1.svg" alt="">
+                    <img src="./assets/svg/disability-2.svg" alt="">
+                    <img src="./assets/svg/disability-3.svg" alt="">
+                    <img src="./assets/svg/disability-4.svg" alt="">
+                    <img src="./assets/svg/disability-5.svg" alt="">
+                </div>
+                <p class="disability-text">Modalités d'accès handicap si la formation se déroule
+                     dans les locaux mis à disposition par ATR, 
+                     elle pourra être rendue accessible aux personnes en
+                      situation de handicap. ATR prendra les dispositions 
+                      en amont de la formation et en concertation avec
+                       l'entreprise et le stagiaire afin d'adapter les
+                        modalités logistiques et pédagogiques.
+                    Contactez nous au 05 90 85 06 05.</p>
+            </div>
+            <div class="qualiopi-certificate" onclick="toggleFullScreen()">
+                <div class="qualiopi-img-container">
+                    <img src="./assets/images/certificat-qualiopi-assistance-tout-risque-.jpg" alt="">
+                </div>
+                <button class="close-btn">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L52 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M52 2L1.99999 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>                      
+                </button>
             </div>
         </div>
     </section>
+    <div class="dates" onclick="toggleCalendar(event)">
+        <div class="dates-container">
+            <h2>Calendrier des formations 4è trimestre 2023</h2>
+            <div class="table-head">
+                <div class="table-label">Intitulé</div>
+                <div class="table-period">Période</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Santé Sécurité Conditions de travail (initial)</div>
+                <div class="table-period">Du 27 Novembre au 1er Décembre</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Santé Sécurité Conditions de travail (renouvellement)</div>
+                <div class="table-period">Du 13 au 15 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation CSE Économique et Social</div>
+                <div class="table-period">Du 15 au 17 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (module initial)</div>
+                <div class="table-period">Du 9 au 10 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (module initial)</div>
+                <div class="table-period">Du 4 au 5 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (initial - MAC)</div>
+                <div class="table-period">30 Octobre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Sauveteur Secouriste du Travail (initial - MAC)</div>
+                <div class="table-period">22 Novembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation des référents (CSE) harcèlement et agissements sexiste</div>
+                <div class="table-period">14 Décembre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Gestes et postures</div>
+                <div class="table-period">26 Octobre 2023</div>
+            </div>
+            <div class="table-line">
+                <div class="table-label">Formation Équipements de protection individuels</div>
+                <div class="table-period">20 Octobre 2023</div>
+            </div>
+        </div>
+        <button class="close-btn">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L52 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <path d="M52 2L1.99999 52" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>                      
+        </button>
+    </div>
     <footer>
         <div class="atr-footer-infos">
             <a href="./index.html">
@@ -873,7 +981,7 @@
                         <a href="./audits.html">Audit MASE</a>
                     </li>
                     <li>
-                        <a href="./audits.htms#audit-internes">Audits internes</a>
+                        <a href="./audits.html#audit-internes">Audits internes</a>
                     </li>
                     <li>
                         <a href="./conseil.html">Conseil</a>
@@ -887,7 +995,7 @@
                         <a href="./formations.html#listing-formations">Listing des formations</a>
                     </li>
                     <li>
-                        <a href="">Calendrier des formations</a>
+                        <button onclick="toggleCalendar(event)">Calendrier des formations</button>
                     </li>
                 </ul>
             </div>
@@ -895,11 +1003,11 @@
                 <h3>Contact</h3>
                 <ul class="contact-links">
                     <li class="phone-numbers">
-                        <a href="">0590 85 06 05</a>
-                        <a href="">0690 35 47 13</a>
+                        <a href="tel:+590590850605">0590 85 06 05</a>
+                        <a href="tel:+590690354713">0690 35 47 13</a>
                     </li>
                     <li>
-                        <a href="">contact@atr97.com</a>
+                        <a href="mailto:contact@atr97.com">contact@atr97.com</a>
                     </li>
                 </ul>
             </div>

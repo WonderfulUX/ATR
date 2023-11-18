@@ -68,4 +68,19 @@ function toggleSearchBar(e){
 
 function toggleDescription(element){
     element.parentElement.classList.toggle('reveal');
+    element.parentElement.querySelector('.training-description').classList.toggle('d');
+    element.parentElement.querySelector('.training-infos').classList.toggle('d');
+}
+
+function toggleFullScreen(){
+    document.querySelector('.qualiopi-certificate').classList.toggle('full-screen');
+    document.body.classList.toggle('locked');
+    if(!document.body.classList.toggle('locked')) document.querySelector('.qualiopi-certificate').scrollTop = 0 ;
+}
+
+function toggleCalendar(e){
+    if(e.target.closest('.dates-container')) return;
+    document.querySelector('.dates').classList.toggle('full-screen');
+    document.body.classList.toggle('locked');
+    if(!document.body.classList.toggle('locked')) document.querySelector('.dates').scrollTop = 0 ;
 }
