@@ -304,6 +304,7 @@ header svg {
   }
   .nav-item {
     padding-right: 0;
+    height: 70px;
     line-height: 70px !important;
   }
   .nav-item::before {
