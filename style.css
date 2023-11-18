@@ -1598,7 +1598,6 @@ input[type=date]:not([value=""])::-webkit-datetime-edit {
 
 .stats,
 .stats-top,
-.legend-color,
 .legend-color {
   display: flex;
   justify-self: center;
@@ -1612,27 +1611,36 @@ input[type=date]:not([value=""])::-webkit-datetime-edit {
 }
 
 .stats {
-  padding: 30px;
+  padding: 24px;
   row-gap: 30px;
   background: var(--dark-blue-10);
   flex-direction: column;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 410px) {
+  .stats {
+    padding: 16px;
+  }
 }
 
 .stats-top {
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 600px) {
   .stats-top {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    padding: 0;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 @media screen and (max-width: 390px) {
   .stats-top {
     -moz-column-gap: 16px;
          column-gap: 16px;
+  }
+  .stats-top .legend-color-label {
+    font-size: 12px;
   }
 }
 
@@ -1643,7 +1651,7 @@ input[type=date]:not([value=""])::-webkit-datetime-edit {
   background: conic-gradient(#EC6300 3deg, #3DB84E 3deg 10deg, #267331 10deg);
   position: relative;
 }
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 600px) {
   .pie-chart {
     width: 100px;
     height: 100px;

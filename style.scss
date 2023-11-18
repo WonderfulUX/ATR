@@ -1420,7 +1420,6 @@ input[type='date']:not([value=''])::-webkit-datetime-edit{
 
 .stats,
 .stats-top,
-.legend-color,
 .legend-color{
     display: flex;
     justify-self: center;
@@ -1434,19 +1433,27 @@ input[type='date']:not([value=''])::-webkit-datetime-edit{
 }
 
 .stats{
-    padding: 30px;
+    padding: 24px;
     row-gap: 30px;
     background: var(--dark-blue-10);
     flex-direction: column;
     margin-bottom: 50px;
+    @media screen and (max-width: 410px) {
+        padding: 16px;
+    }
 }
 .stats-top{
     column-gap: 50px;
-    @media screen and (max-width: 585px) {
-        column-gap: 20px;
+    @media screen and (max-width: 600px) {
+        padding: 0;
+        column-gap: 30px;
     }
     @media screen and (max-width: 390px) {
         column-gap: 16px;
+        & .legend-color-label{
+            font-size: 12px;
+        }
+
     }
 }
 
@@ -1456,7 +1463,7 @@ input[type='date']:not([value=''])::-webkit-datetime-edit{
     border-radius: 50%;
     background: conic-gradient(#EC6300 3deg, #3DB84E 3deg 10deg, #267331 10deg);
     position: relative;
-    @media screen and (max-width: 585px) {
+    @media screen and (max-width: 600px) {
         width: 100px;
         height: 100px;
     }
